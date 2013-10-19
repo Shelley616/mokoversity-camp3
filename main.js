@@ -19,4 +19,4 @@ return{
 }
 }) ();
 
-gamemodule.start(); 
+gameModule.start(); 
