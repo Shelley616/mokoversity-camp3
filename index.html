@@ -53,15 +53,27 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-	
 
-<div id="main"></div>
-<div id="scores"></div>
 
 <div class="row">
-<div class="col-md-2">Hello!!</div>
-<div class="clo-md-10">World!!</div>
+	<div class="col-md-12">
+<div id="mian"><canvas id="game"></canvas></div>
+
 </div>
+<script>
+var canvas = document.getElementById('game');
+var ctx = canvas.getContext('2d');
+
+canvas.width = 480;
+canvas.height = 320;
+
+ctx.fillstyle = 'black';
+ctx.beginPath();
+ctx.arc(100,150,50,0,Math.PI * 2, true);
+ctx.fill();
+</script>
+
+
 
 </body>
 </html>
