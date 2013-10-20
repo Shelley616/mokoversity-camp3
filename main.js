@@ -7,7 +7,7 @@ var gameModule=(function(){
 		ballY,
 		ballR,
 		scores;
-		
+
 function touchEvent(evt) {
 	var x = evt.clientX,
 		y = evt.clientY,
@@ -17,11 +17,13 @@ function touchEvent(evt) {
 
 	
 	if (tmp < ballR*ballR) {
+		scores = scores + (100 - ballR);
 		console.log("Hit ! Your scores:" + scores);
 	}
 }
 function start(){
-	
+	scores = 0;
+
 	document.getElementById("main").addEventListener("click",touchEvent,false);
 	startGame();
 }
@@ -29,9 +31,9 @@ function start(){
 function startGame(){
 		var canvas = document.getElementById('game');
 		var  ctx = canvas.getContext('2d');
-			ballX = Math.floor(Math.random()* 300);
-			ballY = Math.floor(Math.random()* 500);
-			ballR = Math.floor(Math.random()* 100);
+			ballX = Math.floor(Math.random()* 600);
+			ballY = Math.floor(Math.random()* 450);
+			ballR = Math.floor(Math.random()* 80);
 
 canvas.width = 480;
 canvas.height = 640;
@@ -53,6 +55,7 @@ ctx.fill();
 }
 	function gameOver() {
 	
+        console.log("Final:" + scores);
 	}
 
 return{
