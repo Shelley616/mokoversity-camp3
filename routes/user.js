@@ -2,6 +2,7 @@
 /*
  * GET users listing.
  */
+
 var scores = [];
 
 exports.list = function(req, res){
@@ -11,5 +12,7 @@ exports.list = function(req, res){
 exports.save = function(req, res){
   scores.push(req.query.scores);
 
-  console.log("Your Scores:" + scores);
+  console.log("[Sever]Your scores:" + scores);
+
 };
+
