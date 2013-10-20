@@ -23,9 +23,13 @@ ctx.fill();
 	}else{
 		timeoutVar = setTimeout(start,1000);
 		counter = counter + 1
+	}
+	
+}
+	function gameOver() {
 		console.log("counter: " + counter);
 	}
-}
+
 return{
 	start:start
 }
